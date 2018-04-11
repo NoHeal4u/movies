@@ -19,7 +19,22 @@
             <p class="blog-post-meta">Reziser filma: {{$movie->director}}</p>
             <p class="blog-post-meta">Kratak uvid u zaplet: {{$movie->storyline}}</p>
             <p class="blog-post-meta">Godina snimanja: {{$movie->production_year}}</p>
-   
+            
+
+             @if(count($movie->comments)) 
+            <hr/>
+            <h4>Comments</h4>
+            <ul class="list-unstyled" >
+              @foreach($movie->comments as $comment)
+                <li>
+                  <p>{{ $comment->text }}</p>
+                  <p>Postavljeno: {{ $comment->created_at }}</p>
+                </li>
+              @endforeach
+            </ul>
+            @endif
+
+
         </div>
         </div>
         
