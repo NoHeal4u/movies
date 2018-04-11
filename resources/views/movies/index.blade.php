@@ -9,7 +9,7 @@
 		<ul>
           @foreach($movies as $movie)
             <li>
-                <a >{{$movie->title}}</a>
+                <a href="{{route('single-movie',['id'=> $movie->id])}}" >{{$movie->title}}</a>
                 <p>{{$movie->storyline}}</p>
             </li>
           @endforeach
@@ -21,4 +21,4 @@
 
 
       
-
+ 
