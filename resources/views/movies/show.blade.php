@@ -22,6 +22,27 @@
             
 
              @if(count($movie->comments)) 
+
+  <form method="POST" action="{{route('comments-movie',['movie_id'=>$movie->id])}}">
+
+                  {{csrf_field()}}
+
+    <div class="form-group">
+      <label for="title"> Dodaj komentar </label>
+      <input id="text" type="text" name="text" class="form-control">
+      @include('layouts.partials.error-message',['fieldTitle'=>'text']) 
+    </div>
+
+    
+
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary">Submit</button>
+      
+    </div>
+  </form>
+
+
+
             <hr/>
             <h4>Comments</h4>
             <ul class="list-unstyled" >

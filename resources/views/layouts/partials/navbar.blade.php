@@ -3,7 +3,7 @@
 
         <nav class="nav blog-nav">
           <a class="nav-link active" href="/movies">Movies</a>
-          <a class="nav-link" href="/add">Add movie</a>
+          <a class="nav-link" href="/create">Add movie</a>
          
         </nav>
       </div>
